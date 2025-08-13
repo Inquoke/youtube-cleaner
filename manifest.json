@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Cleaner",
+  "version": "1.0",
+  "description": "Hide YouTube comments and/or Shorts — your choice.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "options.html"
+}
